@@ -1,0 +1,126 @@
+/*
+import "./partone.css";
+import FormInput from "./FormInput";
+import { useState } from "react";
+
+function Parttwo() {
+    const [value, setValue] = useState({
+      Number: "",
+    });
+    const [result, setResult] = useState("");
+    const inputs = [
+      {
+        id: 1,
+        name: "Number",
+        type: "number",
+        placeholder: "Number of words to generate (n)",
+        errorMessage: "the length must be a number, minimum is 3",
+        min: 3,
+        label: "Number to generate",
+        pattern: "[0-9]+",
+        required: true,
+      }
+    ];
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      genererlangage();
+    };
+
+  //////////////////////////////////////////////////////////////////////
+  
+  function printAllKlength(alphabet, k, liste){
+    // n is the number of letters in the alphabet
+    let n = alphabet.length;
+    // call the recursive function with an empty prefix 
+    printAllKlengthRec(alphabet, "", n, k, liste);
+  }
+  
+  function printAllKlengthRec(alphabet, prefix, n, k, liste){
+    // base case if k is 0 add the word to the liste to store it
+    if( k == 0 ){
+      liste.push(prefix);
+      return;
+    }
+
+    for (let i = 0; i < n; i++) {
+      var newPrefix = prefix + alphabet[i];
+      printAllKlengthRec(alphabet, newPrefix, n, k-1, liste);
+    }
+  }
+  
+  function generate_words(liste, k){
+    // starting variable
+    let word_list = [];
+    let word = "";
+    let i = 0;
+    let j = 0;
+    // add "abb" between every character of the every word
+    while(i <= k){
+        while(j < liste.length){
+            word = liste[j];
+            word = word.slice(0,i) + "abb" + word.slice(i);
+            word_list.push(word);
+            j = j + 1;
+        }
+        i += 1;
+        j = 0;
+    }
+    let uniqueWordListe = [...new Set(word_list)]; // change the array to a set to avoid multiple values
+
+    const cpt = uniqueWordListe.length;
+
+    let s = "The word count is " + uniqueWordListe.length + " as listed: ";
+    
+    for (let i = 0; i< uniqueWordListe.length; i++) {
+      s = s + " || " + uniqueWordListe[i];
+    }
+    setResult(s);
+  
+  }
+  
+  function generate_all_words(set1, inputVal, liste){
+    // k is the size of possible a and b combinations
+    let k = inputVal-3;
+    // generate the possible combinations 
+    printAllKlength(set1, k, liste);
+    // add the "abb" substring to get the langage words
+    generate_words(liste,k);
+  }
+  
+  function genererlangage(){
+    var inputVal = value.Number; // get the size from the number input
+    var set = ['a','b']; // array of the alphabet 
+    var liste = []; // empty list to store the possible combinations 
+    // deleting the created html element from previous uses
+    
+    generate_all_words(set, inputVal, liste);
+  }
+
+ //////////////////////////////////////////////////////////////////////
+  
+  
+  const onChange = (e) => {
+    setValue({ ...value, [e.target.name]: e.target.value });
+  };
+
+  return (
+    <div className="partone">
+      <form onSubmit={handleSubmit}>
+        <h1 className="title2">Generate n words of the language L(G)</h1>
+        {inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            {...input}
+            value={value[input.name]}
+            onChange={onChange}
+          />
+        ))}
+        <button>Submit</button>
+        <div className="result"> <br/> {result}</div>
+      </form>
+    </div>
+  )
+}
+
+export default Parttwo*/
