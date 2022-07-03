@@ -79,7 +79,7 @@ function Partthree() {
           />
         ))}
         <button>Submit</button>
-        <div className="result"> resultat:{result}</div>
+        <div className="result"> Resultat:{result}</div>
       </form>
     </div>
   )

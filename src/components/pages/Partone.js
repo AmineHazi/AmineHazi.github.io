@@ -118,7 +118,7 @@ const Partone = () => {
           />
         ))}
         <button>Submit</button>
-        <div className="result"> resultat:{resultP}</div>
+        <div className="result"> Resultat: {resultP}</div>
       </form>
       <form onSubmit={handleSubmitM}>
         <h1 className="title2">Miroir d'un mot</h1>
@@ -131,7 +131,7 @@ const Partone = () => {
           />
         ))}
         <button>Submit</button>
-        <div className="result"> resultat:{resultM}</div>
+        <div className="result"> Resultat: {resultM}</div>
       </form>
     </div>
   );

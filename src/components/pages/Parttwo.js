@@ -98,7 +98,7 @@ function Parttwo() {
           ))}
         <button>Submit</button>
   
-        <div className="result"> Resultat<br/> {result}</div>
+        <div className="result"> Resultat: <br/> {result}</div>
       </form>
     </div>
   )
