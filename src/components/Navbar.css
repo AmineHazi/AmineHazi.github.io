@@ -135,10 +135,9 @@ p,br {
         background-color: rgba(4, 60, 116, 0);
         outline: none;
         border: none;
-        right: 40px;
-        bottom: -18px;
+        right: 10%;
+        top: 2%;
         transition: 0.5s ease-in;
-
     }
     p {
         display: block;
