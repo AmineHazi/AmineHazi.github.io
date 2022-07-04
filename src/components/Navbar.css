@@ -42,6 +42,8 @@ h3 {
 
 
 .nav-links {
+
+    position: sticky;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -83,6 +85,8 @@ h3 {
 p,br {
     display: none;
 }
+
+
 @media screen and (max-width: 768px) {
     .logo {
       display: flex;
@@ -105,7 +109,7 @@ p,br {
     }
     .nav-links-mobile {
         position: sticky;
-        margin-top: 16%;
+        margin-top: 25em;
         top: 11%;
         display: block;
         list-style: none;
