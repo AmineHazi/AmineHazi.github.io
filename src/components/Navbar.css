@@ -97,11 +97,10 @@ p,br {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        min-height: 8.9vh;
         background: linear-gradient(to right, rgb(14, 0, 78), rgb(64, 0, 77));
         box-shadow: 0px 5px 50px rgb(41, 0, 95);
         position: sticky;
-        height: 11%; 
+        height: 70px;
     }
     
     .nav-links {
@@ -136,7 +135,7 @@ p,br {
         outline: none;
         border: none;
         right: 10%;
-        top: 2%;
+        bottom: -33%;
         transition: 0.5s ease-in;
     }
     p {
