@@ -117,7 +117,7 @@ const Partone = () => {
             onChange={onChange}
           />
         ))}
-        <button>Submit</button>
+        <button>Entrez</button>
         <div className="result"> Resultat: {resultP}</div>
       </form>
       <form onSubmit={handleSubmitM}>
@@ -130,7 +130,7 @@ const Partone = () => {
             onChange={onChangeT}
           />
         ))}
-        <button>Submit</button>
+        <button>Entrez</button>
         <div className="result"> Resultat: {resultM}</div>
       </form>
     </div>
